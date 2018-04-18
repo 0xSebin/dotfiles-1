@@ -9,3 +9,5 @@ export PURE_CMD_MAX_EXEC_TIME=2
 
 eval "$(hub alias -s)"
 eval "$(thefuck --alias)"
+
+alias vim="nvim"
