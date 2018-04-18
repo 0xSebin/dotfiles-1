@@ -1,1 +1,5 @@
 bin/hub # binary file
+
+# vim plugins
+vim/plugged
+!vim/plugged/.gitkeep
