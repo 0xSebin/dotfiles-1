@@ -13,6 +13,12 @@ Plug 'liuchengxu/space-vim-dark'
 Plug 'gabrielelana/vim-markdown'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'junegunn/fzf.vim'
+Plug 'danro/rename.vim'
+Plug 'scrooloose/nerdtree'
+Plug 'editorconfig/editorconfig-vim'
+Plug 'airblade/vim-gitgutter'
 call plug#end()
 
 " autoinstall plugins
@@ -30,3 +36,11 @@ hi Normal     ctermbg=NONE guibg=NONE
 hi LineNr     ctermbg=NONE guibg=NONE
 hi SignColumn ctermbg=NONE guibg=NONE
 
+" enable line numbers by default
+set number
+
+" disable spell checker
+set nospell
+
+" keybindings
+map <C-o> :NERDTreeToggle<CR>

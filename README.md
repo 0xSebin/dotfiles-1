@@ -10,7 +10,7 @@ There is no automatic setup. Clone this repo (to `~/.dotfiles`) and add the foll
 # link location -> link target
 # ln -s target location
 ~/.config/nvim -> ~/dotfiles/vim
-~/.hyper.js -> ~
+~/.hyper.js -> ~/dotfiles/.hyper.js
 ```
 
 Also, the following files have to be modified.
