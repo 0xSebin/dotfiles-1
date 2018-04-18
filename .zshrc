@@ -11,3 +11,5 @@ eval "$(hub alias -s)"
 eval "$(thefuck --alias)"
 
 alias vim="nvim"
+alias top="vtop"
+alias ls="ls --color=auto"
