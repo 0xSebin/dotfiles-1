@@ -1,4 +1,4 @@
-so plug.vim
+so ~/dotfiles/vim/plug.vim
 
 call plug#begin('~/dotfiles/vim/plugged')
 Plug 'connorholyday/vim-snazzy'
