@@ -13,3 +13,5 @@ eval "$(thefuck --alias)"
 alias vim="nvim"
 alias top="vtop"
 alias ls="ls --color=auto"
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
