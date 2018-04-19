@@ -9,16 +9,22 @@ so ~/dotfiles/vim/plug.vim
 
 " load plugins
 call plug#begin('~/dotfiles/vim/plugged')
-Plug 'liuchengxu/space-vim-dark'
+Plug 'dracula/vim', { 'as': 'dracula' }
 Plug 'gabrielelana/vim-markdown'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'danro/rename.vim'
-Plug 'scrooloose/nerdtree'
+"Plug 'scrooloose/nerdtree'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'airblade/vim-gitgutter'
+Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+Plug 'xojs/vim-xo'
+Plug 'chrisbra/NrrwRgn'
+Plug 'wokalski/autocomplete-flow'
+Plug 'Shougo/neosnippet'
+Plug 'Shougo/neosnippet-snippets'
 call plug#end()
 
 " autoinstall plugins
@@ -31,7 +37,7 @@ autocmd VimEnter *
 let g:airline_theme='minimalist'
 
 " intitialize color scheme
-colorscheme space-vim-dark
+color dracula
 hi Normal     ctermbg=NONE guibg=NONE
 hi LineNr     ctermbg=NONE guibg=NONE
 hi SignColumn ctermbg=NONE guibg=NONE
@@ -43,4 +49,8 @@ set number
 set nospell
 
 " keybindings
-map <C-o> :NERDTreeToggle<CR>
+map <C-o> :FZF<CR>
+
+" enable deoplete (auto completer)
+let g:deoplete#enable_at_startup = 1
+
