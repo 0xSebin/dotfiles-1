@@ -108,14 +108,8 @@ module.exports = {
 
     // for advanced config flags please refer to https://hyper.is/#cfg
 
-    hyperMacControls: {
-      align: 'right'
-    },
-
-    hyperTabs: {
-      border: true,
-      tabIconsColored: true,
-      activityColor: 'salmon',
+    hyperBorder: {
+      animate: true,
     }
   },
 
@@ -125,7 +119,14 @@ module.exports = {
   //   `hyperpower`
   //   `@company/project`
   //   `project#1.0.1`
-  plugins: ["gitrocket", "hyperterm-paste", "hyper-tabs-enhanced", "hyper-sierra"],
+  plugins: [
+    "gitrocket",
+    "hyperterm-paste",
+    "hyper-tabs-enhanced",
+    "hyper-sierra",
+    "hyper-statusline",
+    "hyperborder"
+  ],
 
   // in development, you can create a directory under
   // `~/.hyper_plugins/local/` and include it here
