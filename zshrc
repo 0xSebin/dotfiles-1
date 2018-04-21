@@ -1,3 +1,4 @@
+#!/usr/bin/env zsh
 # https://github.com/supertassu/dotfiles
 # .zshrc
 
@@ -7,13 +8,15 @@ source <(antibody init)
 antibody bundle < ~/dotfiles/zsh_plugins.txt
 
 export PATH="$HOME/dotfiles/bin:$HOME/.cargo/bin:$HOME/.yarn/bin:./node_modules/.bin:$PATH"
-export PURE_CMD_MAX_EXEC_TIME=2
 
-eval "$(hub alias -s)"
-eval "$(thefuck --alias)"
+[[ cmd_exists("hub") ]] && eval "$(hub alias -s)"
+[[ cmd_exists("thefuck") ]] && eval "$(thefuck --alias)"
 
 alias vim="nvim"
 alias top="vtop"
 alias ls="ls --color=auto"
 
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

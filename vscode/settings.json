@@ -2,7 +2,7 @@
     "editor.fontFamily": "Iosevka",
     "window.menuBarVisibility": "toggle",
     "editor.fontSize": 13,
-    "workbench.colorTheme": "Atom One Light",
+    "workbench.colorTheme": "Ayu Light",
     "files.autoSave": "onFocusChange",
     "npm.packageManager": "yarn",
     "npm-intellisense.showBuildInLibs": true,
@@ -15,4 +15,5 @@
     "react.beautify.onSave": true,
     "git.autofetch": true,
     "git.enableCommitSigning": true,
+    "git.confirmSync": false,
 }
