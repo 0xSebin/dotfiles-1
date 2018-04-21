@@ -13,6 +13,7 @@ There is no automatic setup. Clone this repo (to `~/.dotfiles`) and add the foll
 ~/.hyper.js -> ~/dotfiles/hyper.js
 ~/.tmux.conf -> ~/dotfiles/tmux.conf
 ~/.fluxbox/keys -> ~/dotfiles/fluxbox/keys
+~/.config/Code/User/settings.json -> ~/dotfiles/vscode/settings.json
 ```
 
 Also, the following files have to be modified.

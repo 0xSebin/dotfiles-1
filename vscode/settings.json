@@ -1,0 +1,18 @@
+{
+    "editor.fontFamily": "Iosevka",
+    "window.menuBarVisibility": "toggle",
+    "editor.fontSize": 13,
+    "workbench.colorTheme": "Atom One Light",
+    "files.autoSave": "onFocusChange",
+    "npm.packageManager": "yarn",
+    "npm-intellisense.showBuildInLibs": true,
+    "npm-intellisense.scanDevDependencies": true,
+    "xo.enable": true,
+    "xo.options": {
+        "--fix": "true"
+    },
+    "editor.formatOnSave": true,
+    "react.beautify.onSave": true,
+    "git.autofetch": true,
+    "git.enableCommitSigning": true,
+}
