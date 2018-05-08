@@ -1,21 +1,18 @@
-// Future versions of Hyper may add additional config options,
-// which will not automatically be merged into this file.
-// See https://hyper.is#cfg for all currently supported options.
+// Future versions of Hyper may add additional config options, which will not
+// automatically be merged into this file. See https://hyper.is#cfg for all
+// currently supported options.
 
 module.exports = {
   config: {
-    // Choose either "stable" for receiving highly polished,
-    // or "canary" for less polished but more frequent updates
+    // Choose either "stable" for receiving highly polished, or "canary" for less
+    // polished but more frequent updates
     updateChannel: 'canary',
 
     // default font size in pixels for all tabs
-    fontSize: 14,
+    fontSize: 13,
 
     // font family with optional fallbacks
     fontFamily: 'Iosevka, Menlo, "DejaVu Sans Mono", Consolas, "Lucida Console", monospace',
-
-    // terminal cursor background color and opacity (hex, rgb, hsl, hsv, hwb or cmyk)
-    cursorColor: 'rgba(248,28,229,0.8)',
 
     // `BEAM` for |, `UNDERLINE` for _, `BLOCK` for █
     cursorShape: 'BEAM',
@@ -23,14 +20,10 @@ module.exports = {
     // set to true for blinking cursor
     cursorBlink: true,
 
-    // color of the text
-    foregroundColor: '#fff',
-
-    // terminal background color
-    backgroundColor: '#000',
-
-    // border color (window, tabs)
-    borderColor: '#333',
+    backgroundColor: "#111",
+    foregroundColor: "#fff",
+    borderColor: "#111",
+    cursorColor: "#444",
 
     // custom css to embed in the main window
     css: '',
@@ -38,8 +31,9 @@ module.exports = {
     // custom css to embed in the terminal window
     termCSS: '',
 
-    // set to `true` (without backticks) if you're using a Linux setup that doesn't show native menus
-    // default: `false` on Linux, `true` on Windows (ignored on macOS)
+    // set to `true` (without backticks) if you're using a Linux setup that doesn't
+    // show native menus default: `false` on Linux, `true` on Windows (ignored on
+    // macOS)
     showHamburgerMenu: 'true',
 
     // set to `false` if you want to hide the minimize, maximize and close buttons
@@ -50,20 +44,20 @@ module.exports = {
     // custom padding (css format, i.e.: `top right bottom left`)
     padding: '5px 25px',
 
-    // the full list. if you're going to provide the full color palette,
-    // including the 6 x 6 color cubes and the grayscale map, just provide
-    // an array here instead of a color map object
+    // the full list. if you're going to provide the full color palette, including
+    // the 6 x 6 color cubes and the grayscale map, just provide an array here
+    // instead of a color map object
     colors: {
-      black: '#000000',
-      red: '#ff0000',
-      green: '#33ff00',
-      yellow: '#ffff00',
-      blue: '#0066ff',
+      black: "#111",
+      red: "#e27e8d",
+      green: "#91DD64",
+      yellow: "#ffd14a",
+      blue: "#00aeff",
       magenta: '#cc00ff',
       cyan: '#00ffff',
       white: '#d0d0d0',
       lightBlack: '#808080',
-      lightRed: '#ff0000',
+      lightRed: '#e27e8d',
       lightGreen: '#33ff00',
       lightYellow: '#ffff00',
       lightBlue: '#0066ff',
@@ -72,8 +66,8 @@ module.exports = {
       lightWhite: '#ffffff'
     },
 
-    // the shell to run when spawning a new session (i.e. /usr/local/bin/fish)
-    // if left empty, your system's login shell will be used by default
+    // the shell to run when spawning a new session (i.e. /usr/local/bin/fish) if
+    // left empty, your system's login shell will be used by default
     //
     // Windows
     // - Make sure to use a full path if the binary name doesn't work
@@ -86,8 +80,8 @@ module.exports = {
     // - Example: `C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe`
     shell: '/usr/bin/zsh',
 
-    // for setting shell arguments (i.e. for using interactive shellArgs: ['-i'])
-    // by default ['--login'] will be used
+    // for setting shell arguments (i.e. for using interactive shellArgs: ['-i']) by
+    // default ['--login'] will be used
     shellArgs: ['-i'],
 
     // for environment variables
@@ -103,40 +97,26 @@ module.exports = {
     // selection is present (true by default on Windows)
     quickEdit: true,
 
-    // URL to custom bell
-    // bellSoundURL: 'http://example.com/bell.mp3',
-
-    // for advanced config flags please refer to https://hyper.is/#cfg
+    // URL to custom bell bellSoundURL: 'http://example.com/bell.mp3', for advanced
+    // config flags please refer to https://hyper.is/#cfg
 
     hyperBorder: {
-      animate: true,
+      animate: true
     }
   },
 
-  // a list of plugins to fetch and install from npm
-  // format: [@org/]project[#version]
-  // examples:
-  //   `hyperpower`
-  //   `@company/project`
-  //   `project#1.0.1`
-  plugins: [
-    "gitrocket",
-    "hyperterm-paste",
-    "hyper-tabs-enhanced",
-    "hyper-sierra",
-    "hyper-statusline",
-    "hyperborder"
-  ],
+  // a list of plugins to fetch and install from npm format:
+  // [@org/]project[#version] examples:   `hyperpower`   `@company/project`
+  // `project#1.0.1`
+  plugins: ["gitrocket", //"hyper-sierra",
+  "hyperterm-paste", "hyper-tabs-enhanced", "hyper-statusline", "hyper-sierra"],
 
-  // in development, you can create a directory under
-  // `~/.hyper_plugins/local/` and include it here
-  // to load it and avoid it being `npm install`ed
-  localPlugins: [],
+  // in development, you can create a directory under `~/.hyper_plugins/local/`
+  // and include it here to load it and avoid it being `npm install`ed
+  localPlugins: ["framer-hyper"],
 
   keymaps: {
     // Example
-    'window:devtools': 'crtl+alt+o',
-    },
-
-
+    'window:devtools': 'crtl+alt+o'
+  }
 };

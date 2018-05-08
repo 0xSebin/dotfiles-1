@@ -7,7 +7,7 @@ autoload -U promptinit; promptinit;
 source <(antibody init)
 antibody bundle < ~/dotfiles/zsh_plugins.txt
 
-export PATH="$HOME/dotfiles/bin:$HOME/.cargo/bin:$HOME/.yarn/bin:./node_modules/.bin:$PATH"
+export PATH="$HOME/dotfiles/bin:$HOME/.cargo/bin:$HOME/.yarn/bin:/snap/bin:./node_modules/.bin:$PATH"
 
 [[ cmd_exists("hub") ]] && eval "$(hub alias -s)"
 [[ cmd_exists("thefuck") ]] && eval "$(thefuck --alias)"

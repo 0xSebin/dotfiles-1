@@ -5,8 +5,8 @@ mafredri/zsh-async # required by pure
 #supertassu/pure # pure prompt with my edits
 #denysdovhan/spaceship-prompt # spaceship
 
-#/home/tassu/stuff/Smpl # dev
-supertassu/Smpl
+/home/tassu/stuff/Smpl # dev
+#supertassu/Smpl
 
 zsh-users/zsh-syntax-highlighting # Fish shell like syntax highlighting for zsh
 zsh-users/zsh-completions # Additional completion definitions for Zsh
