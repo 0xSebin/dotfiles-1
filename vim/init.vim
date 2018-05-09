@@ -49,15 +49,15 @@ set number
 set nospell
 
 " use search highlighting
-:set hlsearch
+set hlsearch
 
 " highlight trailing whitespaces
-:highlight ExtraWhitespace ctermbg=red guibg=red
-:autocmd ColorScheme * highlight ExtraWhitespace ctermbg=red guibg=red
+highlight ExtraWhitespace ctermbg=red guibg=red
+autocmd ColorScheme * highlight ExtraWhitespace ctermbg=red guibg=red
 
 " keybindings
 map <C-o><C-o> :FZF<CR>
-map <C-o> :FZF \
+map <C-o> :FZF ./
 
 " enable deoplete (auto completer)
 let g:deoplete#enable_at_startup = 1

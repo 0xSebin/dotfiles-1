@@ -2,7 +2,7 @@
     "editor.fontFamily": "Iosevka",
     "window.menuBarVisibility": "toggle",
     "editor.fontSize": 13,
-    "workbench.colorTheme": "Dracula",
+    "workbench.colorTheme": "Framer Syntax",
     "files.autoSave": "onFocusChange",
     "npm.packageManager": "yarn",
     "xo.enable": true,
@@ -15,4 +15,8 @@
     "git.confirmSync": false,
     "explorer.confirmDelete": false,
     "workbench.iconTheme": "vscode-icons",
+    "gitlens.advanced.messages": {
+        "suppressShowKeyBindingsNotice": true
+    },
+    "gitlens.historyExplorer.enabled": true,
 }
