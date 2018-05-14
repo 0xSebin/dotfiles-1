@@ -1,4 +1,5 @@
-bin/hub # binary file
+bin/hub
+bin/exa
 
 # vim plugins
 vim/.netrwhist

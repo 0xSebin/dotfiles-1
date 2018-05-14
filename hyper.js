@@ -20,17 +20,6 @@ module.exports = {
     // set to true for blinking cursor
     cursorBlink: true,
 
-    backgroundColor: "#111",
-    foregroundColor: "#fff",
-    borderColor: "#111",
-    cursorColor: "#444",
-
-    // custom css to embed in the main window
-    css: '',
-
-    // custom css to embed in the terminal window
-    termCSS: '',
-
     // set to `true` (without backticks) if you're using a Linux setup that doesn't
     // show native menus default: `false` on Linux, `true` on Windows (ignored on
     // macOS)
@@ -43,28 +32,6 @@ module.exports = {
 
     // custom padding (css format, i.e.: `top right bottom left`)
     padding: '5px 25px',
-
-    // the full list. if you're going to provide the full color palette, including
-    // the 6 x 6 color cubes and the grayscale map, just provide an array here
-    // instead of a color map object
-    colors: {
-      black: "#111",
-      red: "#e27e8d",
-      green: "#91DD64",
-      yellow: "#ffd14a",
-      blue: "#00aeff",
-      magenta: '#cc00ff',
-      cyan: '#00ffff',
-      white: '#d0d0d0',
-      lightBlack: '#808080',
-      lightRed: '#e27e8d',
-      lightGreen: '#33ff00',
-      lightYellow: '#ffff00',
-      lightBlue: '#0066ff',
-      lightMagenta: '#cc00ff',
-      lightCyan: '#00ffff',
-      lightWhite: '#ffffff'
-    },
 
     // the shell to run when spawning a new session (i.e. /usr/local/bin/fish) if
     // left empty, your system's login shell will be used by default
@@ -100,20 +67,20 @@ module.exports = {
     // URL to custom bell bellSoundURL: 'http://example.com/bell.mp3', for advanced
     // config flags please refer to https://hyper.is/#cfg
 
-    hyperBorder: {
-      animate: true
-    }
+    verminal: {
+      fontFamily: '"Iosevka Nerd Font", Iosevka, Menlo, "DejaVu Sans Mono", Consolas, "Lucida Console", monospace',
+      fontSize: 13
+    }    
   },
 
   // a list of plugins to fetch and install from npm format:
   // [@org/]project[#version] examples:   `hyperpower`   `@company/project`
   // `project#1.0.1`
-  plugins: ["gitrocket", //"hyper-sierra",
-  "hyperterm-paste", "hyper-tabs-enhanced", "hyper-statusline", "hyper-sierra"],
+  plugins: ["gitrocket", "hyperterm-paste", "hyper-tabs-enhanced", "hyper-statusline"],
 
   // in development, you can create a directory under `~/.hyper_plugins/local/`
   // and include it here to load it and avoid it being `npm install`ed
-  localPlugins: ["framer-hyper"],
+  localPlugins: [],
 
   keymaps: {
     // Example

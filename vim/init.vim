@@ -10,7 +10,6 @@ so ~/dotfiles/vim/plug.vim
 " load plugins
 call plug#begin('~/dotfiles/vim/plugged')
 Plug 'dracula/vim', { 'as': 'dracula' }
-Plug 'gabrielelana/vim-markdown'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
@@ -20,10 +19,8 @@ Plug 'editorconfig/editorconfig-vim'
 Plug 'airblade/vim-gitgutter'
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'xojs/vim-xo'
-Plug 'chrisbra/NrrwRgn'
-Plug 'wokalski/autocomplete-flow'
-Plug 'Shougo/neosnippet'
-Plug 'Shougo/neosnippet-snippets'
+Plug 'alvan/vim-closetag'
+Plug 'sheerun/vim-polyglot'
 call plug#end()
 
 " autoinstall plugins
@@ -58,9 +55,6 @@ autocmd ColorScheme * highlight ExtraWhitespace ctermbg=red guibg=red
 " keybindings
 map <C-o><C-o> :FZF<CR>
 map <C-o> :FZF ./
-
-" enable deoplete (auto completer)
-let g:deoplete#enable_at_startup = 1
 
 " configure fzf
 let g:fzf_layout = { 'left': '~25%' }

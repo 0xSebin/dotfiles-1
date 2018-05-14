@@ -2,7 +2,7 @@
     "editor.fontFamily": "Iosevka",
     "window.menuBarVisibility": "toggle",
     "editor.fontSize": 13,
-    "workbench.colorTheme": "Framer Syntax",
+    "workbench.colorTheme": "An Old Hope",
     "files.autoSave": "onFocusChange",
     "npm.packageManager": "yarn",
     "xo.enable": true,
@@ -14,9 +14,21 @@
     "git.enableCommitSigning": true,
     "git.confirmSync": false,
     "explorer.confirmDelete": false,
-    "workbench.iconTheme": "vscode-icons",
     "gitlens.advanced.messages": {
         "suppressShowKeyBindingsNotice": true
     },
     "gitlens.historyExplorer.enabled": true,
+    "liveServer.settings.donotShowInfoMsg": true,
+    "discord.enabled": true,
+    "explorer.autoReveal": false,
+    "files.exclude": {
+        "**/.git": true,
+        "**/.svn": true,
+        "**/.hg": true,
+        "**/CVS": true,
+        "**/.DS_Store": true,
+        "**/node_modules": true,
+        "**/dist": true,
+        "**/db": true
+    },
 }
