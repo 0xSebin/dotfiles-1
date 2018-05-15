@@ -13,8 +13,9 @@ export PATH="$HOME/dotfiles/bin:$HOME/.cargo/bin:$HOME/.yarn/bin:/snap/bin:./nod
 [[ cmd_exists("thefuck") ]] && eval "$(thefuck --alias)"
 
 alias vim="nvim"
-alias top="vtop"
+[[ cmd_exists("vtop") ]] && alias top="vtop"
 [[ cmd_exists("exa") ]] && alias ls="exa"
+[[ cmd_exists("exa") ]] && alias tree="exa --tree"
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm

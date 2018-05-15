@@ -1,3 +1,8 @@
+" DoRemote function
+function! DoRemote(arg)
+  UpdateRemotePlugins
+endfunction
+
 " download plug if it does not exist
 if empty(glob('~/dotfiles/vim/plug.vim'))
   silent !curl -fLo ~/dotfiles/vim/plug.vim --create-dirs
@@ -9,18 +14,60 @@ so ~/dotfiles/vim/plug.vim
 
 " load plugins
 call plug#begin('~/dotfiles/vim/plugged')
-Plug 'dracula/vim', { 'as': 'dracula' }
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
-Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
-Plug 'junegunn/fzf.vim'
-Plug 'danro/rename.vim'
+"" Most plugins borrowed from https://github.com/nikitavoloboev/dotfiles/blob/master/nvim/init.vim
+
+" Utility
+Plug 'romainl/vim-cool' " Stop matching after search is done.
+Plug 'jiangmiao/auto-pairs' " Insert or delete brackets, parens, quotes in pair.
+Plug 'w0rp/ale' " Asynchronous Lint Engine.
+Plug 'honza/vim-snippets' " Snippet files for various programming languages.
+Plug 'sbdchd/neoformat' " Format code.
+Plug 'rizzatti/dash.vim' " Search Dash app.
+Plug 'jremmen/vim-ripgrep' " Use RipGrep in Vim and display results in a quickfix list.
+
+Plug 'scrooloose/nerdcommenter' " Quick comments.
+Plug 'unblevable/quick-scope' " Highlight f, F jumps.
+Plug 'Shougo/vimproc.vim', {'do' : 'make'} " Interactive command execution.
+Plug 'tpope/vim-repeat' " Enable repeating supported plugin maps.
+"Plug 'christoomey/vim-titlecase' " Titlecase text.
+Plug 'tpope/vim-surround' " Quoting/parenthesizing made simple.
+Plug 'junegunn/vim-easy-align' " Simple, easy-to-use alignment.
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' } " Fzf search
+Plug 'junegunn/fzf.vim' " Fzf search.
+Plug 'haya14busa/incsearch.vim' " Improved incremental searching.
+Plug 'easymotion/vim-easymotion' " Vim motions on speed.
+Plug 'thinca/vim-quickrun' " Run commands quickly.
 Plug 'editorconfig/editorconfig-vim'
-Plug 'airblade/vim-gitgutter'
-Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-Plug 'xojs/vim-xo'
-Plug 'alvan/vim-closetag'
-Plug 'sheerun/vim-polyglot'
+
+" Git
+Plug 'tpope/vim-fugitive' " Git wrapper.
+Plug 'mhinz/vim-signify' " Show a diff using Vim its sign column.
+Plug 'airblade/vim-gitgutter' " Shows git diff in the gutter (sign column) and stages/undoes hunks.
+
+" Deoplete
+Plug 'Shougo/deoplete.nvim', { 'do': function('DoRemote') } " Asynchronous completion framework.
+Plug 'zchee/deoplete-jedi' " Deoplete source for jedi.
+
+" C
+Plug 'zchee/deoplete-clang', { 'for': 'c,cpp,objc' }
+
+" Looks
+Plug 'ayu-theme/ayu-vim' " Theme.
+Plug 'vim-airline/vim-airline' " Statusline
+Plug 'vim-airline/vim-airline-themes' " Statusline
+
+" Go
+Plug 'fatih/vim-go', { 'for': 'go' } " Go development.
+Plug 'zchee/deoplete-go', { 'for': 'go', 'do': 'make'} " Asynchronous Go completion.
+
+" Vim
+Plug 'Shougo/neco-vim', { 'for': 'vim' } " Vim source for neocomplete/deoplete.
+
+" Nix
+Plug 'LnL7/vim-nix', { 'for': 'nix' } " Vim configuration files for Nix.
+
+" Markdown
+Plug 'gabrielelana/vim-markdown'
 call plug#end()
 
 " autoinstall plugins
@@ -34,7 +81,11 @@ let g:airline_theme='deus'
 let g:airline_powerline_fonts = 1 
 
 " intitialize color scheme
-color dracula
+" Theme
+set background=dark " Set night mode
+let ayucolor="mirage" " Mirage version of theme
+colorscheme ayu
+
 hi Normal     ctermbg=NONE guibg=NONE
 hi LineNr     ctermbg=NONE guibg=NONE ctermfg=BLUE
 hi SignColumn ctermbg=NONE guibg=NONE
@@ -51,6 +102,9 @@ set hlsearch
 " highlight trailing whitespaces
 highlight ExtraWhitespace ctermbg=red guibg=red
 autocmd ColorScheme * highlight ExtraWhitespace ctermbg=red guibg=red
+
+" enable auto complete engine
+let g:deoplete#enable_at_startup = 1
 
 " keybindings
 map <C-o><C-o> :FZF<CR>
