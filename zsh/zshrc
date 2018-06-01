@@ -16,6 +16,7 @@ alias vim="nvim"
 [[ cmd_exists("vtop") ]] && alias top="vtop"
 [[ cmd_exists("exa") ]] && alias ls="exa"
 [[ cmd_exists("exa") ]] && alias tree="exa --tree"
+[[ cmd_exists("bat") ]] && alias cat="bat"
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm

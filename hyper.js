@@ -20,6 +20,8 @@ module.exports = {
     // set to true for blinking cursor
     cursorBlink: true,
 
+    backgroundColor: 'rgb(15, 17, 26)',
+
     // set to `true` (without backticks) if you're using a Linux setup that doesn't
     // show native menus default: `false` on Linux, `true` on Windows (ignored on
     // macOS)
@@ -66,17 +68,18 @@ module.exports = {
 
     // URL to custom bell bellSoundURL: 'http://example.com/bell.mp3', for advanced
     // config flags please refer to https://hyper.is/#cfg
-
-    verminal: {
-      fontFamily: '"Iosevka Nerd Font", Iosevka, Menlo, "DejaVu Sans Mono", Consolas, "Lucida Console", monospace',
-      fontSize: 13
-    }    
   },
 
   // a list of plugins to fetch and install from npm format:
   // [@org/]project[#version] examples:   `hyperpower`   `@company/project`
   // `project#1.0.1`
-  plugins: ["gitrocket", "hyperterm-paste", "hyper-tabs-enhanced", "hyper-statusline"],
+  plugins: [
+    "gitrocket",
+    "hyperterm-paste",
+    "hyper-tabs-enhanced",
+    "hyper-statusline",
+    "hyperocean"
+  ],
 
   // in development, you can create a directory under `~/.hyper_plugins/local/`
   // and include it here to load it and avoid it being `npm install`ed
