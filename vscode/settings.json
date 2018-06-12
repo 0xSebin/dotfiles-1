@@ -2,7 +2,7 @@
     "editor.fontFamily": "Iosevka",
     "window.menuBarVisibility": "toggle",
     "editor.fontSize": 13,
-    "workbench.colorTheme": "An Old Hope",
+    "workbench.colorTheme": "Aurora",
     "files.autoSave": "onFocusChange",
     "npm.packageManager": "yarn",
     "xo.enable": true,
@@ -28,7 +28,9 @@
         "**/CVS": true,
         "**/.DS_Store": true,
         "**/node_modules": true,
-        "**/dist": true,
+        "**/dist": false,
         "**/db": true
+
     },
+    "explorer.confirmDragAndDrop": false,
 }
