@@ -1,18 +1,20 @@
 [
-    {
-        "key": "ctrl+shift+n",
-        "command": "workbench.action.quickOpen"
-    },
-    {
-        "key": "ctrl+shift+n",
-        "command": "-workbench.action.newWindow"
-    },
-    {
-        "key": "ctrl+shift-q",
-        "command": "openInTerminal"
-    },
-    {
-        "key": "ctrl+shift+w",
-        "command": "xo.fix"
-    }
+    // Section sign
+    { "key": "[Backquote]", "command": "editor.action.commentLine", "when": "editorFocus" }
+
+    // F1
+    { "key": "f1", "command": "-workbench.action.showCommands" },
+    { "key": "f1", "command": "workbench.action.toggleZenMode" },
+
+    // F2
+    { "key": "f2", "command": "workbench.action.previousEditor" },
+
+    // F3
+    { "key": "f3", "command": "-editor.action.nextMatchFindAction", "when": "editorFocus" },
+    { "key": "f3", "command": "workbench.action.quickOpen" },
+
+    // F4
+    { "key": "f4", "command": "workbench.action.closeEditor" },
+    { "key": "ctrl+f4", "command": "workbench.action.closeAllEditors" },
+    { "key": "ctrl f4", "command": "workbench.action.closeAllEditors" }
 ]

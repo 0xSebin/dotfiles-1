@@ -1,26 +1,21 @@
 {
+    // Font configuration
     "editor.fontFamily": "Iosevka",
+    "editor.fontSize": 12,
+
+    // Window configuration
     "window.menuBarVisibility": "toggle",
-    "editor.fontSize": 13,
-    "workbench.colorTheme": "Aurora",
-    "files.autoSave": "onFocusChange",
-    "npm.packageManager": "yarn",
-    "xo.enable": true,
-    "xo.options": {
-        "--fix": "true"
-    },
-    "react.beautify.onSave": true,
-    "git.autofetch": true,
-    "git.enableCommitSigning": true,
-    "git.confirmSync": false,
     "explorer.confirmDelete": false,
-    "gitlens.advanced.messages": {
-        "suppressShowKeyBindingsNotice": true
-    },
-    "gitlens.historyExplorer.enabled": true,
-    "liveServer.settings.donotShowInfoMsg": true,
-    "discord.enabled": true,
     "explorer.autoReveal": false,
+    "explorer.confirmDragAndDrop": false,
+
+    // Looks
+    "workbench.colorTheme": "Plastic",
+    "debug.toolBarLocation": "docked",
+
+    // Files
+    "files.autoSave": "onFocusChange",
+    "files.insertFinalNewline": true,
     "files.exclude": {
         "**/.git": true,
         "**/.svn": true,
@@ -28,9 +23,35 @@
         "**/CVS": true,
         "**/.DS_Store": true,
         "**/node_modules": true,
-        "**/dist": false,
-        "**/db": true
-
+        "**/dist": true,
+        "**/db": true,
+        "**/yarn.lock": true,
+        "**/package-lock.json": true
     },
-    "explorer.confirmDragAndDrop": false,
+
+    // NPM
+    "npm.packageManager": "yarn",
+    
+    // XO
+    "xo.enable": true,
+    
+    // Git
+    "git.autofetch": true,
+    "git.enableCommitSigning": true,
+    "git.confirmSync": false,
+    
+    // Gitlens
+    "gitlens.historyExplorer.enabled": true,
+    "gitlens.advanced.messages": {
+        "suppressShowKeyBindingsNotice": true
+    },
+
+    // Live server
+    "liveServer.settings.donotShowInfoMsg": true,
+
+    // Discord
+    "discord.enabled": true,
+
+    // Clock
+    "clock.datetimeFormat": "HH:mm:ss",
 }

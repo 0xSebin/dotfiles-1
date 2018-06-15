@@ -68,6 +68,9 @@ Plug 'LnL7/vim-nix', { 'for': 'nix' } " Vim configuration files for Nix.
 
 " Markdown
 Plug 'gabrielelana/vim-markdown'
+
+" JS
+Plug 'pangloss/vim-javascript'
 call plug#end()
 
 " autoinstall plugins
@@ -134,3 +137,6 @@ autocmd  FileType fzf set laststatus=0 noshowmode noruler
 " style window split bar
 set fillchars+=vert:│
 autocmd ColorScheme * highlight VertSplit cterm=NONE ctermfg=Green ctermbg=NONE
+
+" tab settings
+set tabstop=4 softtabstop=0 expandtab shiftwidth=2 smarttab
