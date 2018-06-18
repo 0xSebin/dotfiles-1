@@ -9,17 +9,23 @@ antibody bundle < ~/dotfiles/zsh/zsh_plugins.txt
 
 export PATH="$HOME/dotfiles/bin:$HOME/.cargo/bin:$HOME/.yarn/bin:/snap/bin:./node_modules/.bin:$PATH"
 
+source ~/dotfiles/zsh/zsh_functions.zsh
+
 [[ cmd-exists("hub") ]] && eval "$(hub alias -s)"
 [[ cmd-exists("thefuck") ]] && eval "$(thefuck --alias)"
-
 [[ cmd_exists("nvim") ]] && alias vim="nvim"
 [[ cmd_exists("docker-compose") ]] && alias dc="docker-compose"
-[[ cmd-exists("git") ]] alias g="git"
 [[ cmd-exists("vtop") ]] && alias top="vtop"
 [[ cmd-exists("exa") ]] && alias ls="exa"
 [[ cmd-exists("exa") ]] && alias tree="exa --tree"
 [[ cmd-exists("bat") ]] && alias cat="bat"
 [[ cmd-exists("clipboard") ]] && alias cb="clipboard"
+
+if [[ cmd-exists("git") ]]; then
+    alias g="git"
+    alias m="g checkout master"
+fi
+
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
