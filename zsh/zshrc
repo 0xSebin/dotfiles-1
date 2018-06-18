@@ -9,14 +9,17 @@ antibody bundle < ~/dotfiles/zsh/zsh_plugins.txt
 
 export PATH="$HOME/dotfiles/bin:$HOME/.cargo/bin:$HOME/.yarn/bin:/snap/bin:./node_modules/.bin:$PATH"
 
-[[ cmd_exists("hub") ]] && eval "$(hub alias -s)"
-[[ cmd_exists("thefuck") ]] && eval "$(thefuck --alias)"
+[[ cmd-exists("hub") ]] && eval "$(hub alias -s)"
+[[ cmd-exists("thefuck") ]] && eval "$(thefuck --alias)"
 
-alias vim="nvim"
-[[ cmd_exists("vtop") ]] && alias top="vtop"
-[[ cmd_exists("exa") ]] && alias ls="exa"
-[[ cmd_exists("exa") ]] && alias tree="exa --tree"
-[[ cmd_exists("bat") ]] && alias cat="bat"
+[[ cmd_exists("nvim") ]] && alias vim="nvim"
+[[ cmd_exists("docker-compose") ]] && alias dc="docker-compose"
+[[ cmd-exists("git") ]] alias g="git"
+[[ cmd-exists("vtop") ]] && alias top="vtop"
+[[ cmd-exists("exa") ]] && alias ls="exa"
+[[ cmd-exists("exa") ]] && alias tree="exa --tree"
+[[ cmd-exists("bat") ]] && alias cat="bat"
+[[ cmd-exists("clipboard") ]] && alias cb="clipboard"
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
