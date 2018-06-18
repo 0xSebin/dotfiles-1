@@ -1,6 +1,7 @@
 {
     // Font configuration
     "editor.fontFamily": "Iosevka",
+    "editor.fontLigatures": true,
     "editor.fontSize": 12,
 
     // Window configuration
@@ -33,7 +34,10 @@
     "npm.packageManager": "yarn",
     
     // XO
-    "xo.enable": true,
+    "xo.enable": false, // set per project
+
+    // ESLint
+    "eslint.packageManager": "yarn",
     
     // Git
     "git.autofetch": true,
@@ -46,12 +50,13 @@
         "suppressShowKeyBindingsNotice": true
     },
 
-    // Live server
-    "liveServer.settings.donotShowInfoMsg": true,
-
-    // Discord
-    "discord.enabled": true,
-
     // Clock
     "clock.datetimeFormat": "HH:mm:ss",
+
+    // Spotify
+    "spotify.showMuteUnmuteVolumeButton": false,
+    "spotify.showNextButton": false,
+    "spotify.showPlayPauseButton": false,
+    "spotify.showPreviousButton": false,
+    "spotify.trackInfoFormat": "artistName -- trackName",
 }

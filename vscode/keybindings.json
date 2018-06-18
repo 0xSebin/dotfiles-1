@@ -1,6 +1,6 @@
 [
     // Section sign
-    { "key": "[Backquote]", "command": "editor.action.commentLine", "when": "editorFocus" }
+    { "key": "[Backquote]", "command": "editor.action.commentLine", "when": "editorFocus" },
 
     // F1
     { "key": "f1", "command": "-workbench.action.showCommands" },

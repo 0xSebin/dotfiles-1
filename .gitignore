@@ -1,5 +1,6 @@
 bin/hub
 bin/exa
+bin/chromedriver
 
 # vim plugins
 vim/.netrwhist
