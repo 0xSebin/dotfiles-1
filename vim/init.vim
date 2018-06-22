@@ -21,15 +21,10 @@ Plug 'romainl/vim-cool' " Stop matching after search is done.
 Plug 'jiangmiao/auto-pairs' " Insert or delete brackets, parens, quotes in pair.
 Plug 'w0rp/ale' " Asynchronous Lint Engine.
 Plug 'honza/vim-snippets' " Snippet files for various programming languages.
-Plug 'sbdchd/neoformat' " Format code.
-Plug 'rizzatti/dash.vim' " Search Dash app.
-Plug 'jremmen/vim-ripgrep' " Use RipGrep in Vim and display results in a quickfix list.
 
 Plug 'scrooloose/nerdcommenter' " Quick comments.
-Plug 'unblevable/quick-scope' " Highlight f, F jumps.
 Plug 'Shougo/vimproc.vim', {'do' : 'make'} " Interactive command execution.
 Plug 'tpope/vim-repeat' " Enable repeating supported plugin maps.
-"Plug 'christoomey/vim-titlecase' " Titlecase text.
 Plug 'tpope/vim-surround' " Quoting/parenthesizing made simple.
 Plug 'junegunn/vim-easy-align' " Simple, easy-to-use alignment.
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' } " Fzf search
@@ -71,6 +66,9 @@ Plug 'gabrielelana/vim-markdown'
 
 " JS
 Plug 'pangloss/vim-javascript'
+
+" HOCON
+Plug 'GEverding/vim-hocon'
 call plug#end()
 
 " autoinstall plugins
