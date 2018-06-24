@@ -1,0 +1,6 @@
+[user]
+	name = Tassu
+	email = hello@tassu.me
+	signingkey = 94901D4EE4061F7E
+[commit]
+	gpgsign = true

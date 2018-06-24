@@ -1,3 +1,0 @@
-#!/usr/bin/env bash
-
-commit-msg file $1
