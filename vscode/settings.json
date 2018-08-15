@@ -9,10 +9,14 @@
     "explorer.confirmDelete": false,
     "explorer.autoReveal": false,
     "explorer.confirmDragAndDrop": false,
+    "terminal.integrated.rendererType": "dom",
 
     // Looks
     "workbench.colorTheme": "Plastic",
     "debug.toolBarLocation": "docked",
+    "liveServer.settings.donotShowInfoMsg": true,
+    "vsicons.dontShowNewVersionMessage": true,
+    "javascript.updateImportsOnFileMove.enabled": "never",
 
     // Files
     "files.autoSave": "onFocusChange",
@@ -59,4 +63,7 @@
     "spotify.showPlayPauseButton": false,
     "spotify.showPreviousButton": false,
     "spotify.trackInfoFormat": "artistName -- trackName",
+    
+    // Dart path
+    "dart.sdkPath": "/usr/lib/dart",
 }

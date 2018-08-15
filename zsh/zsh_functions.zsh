@@ -7,7 +7,7 @@ co() {
 }
 
 cn() {
-    m
+    git checkout master
     git checkout -b "$1"
 }
 
@@ -16,6 +16,6 @@ fzf-down() {
 }
 
 rm-merged() {
-    m
+    git checkout master
     git branch --merged master | grep -v '^[ *]*master$' | xargs git branch -d
 }
