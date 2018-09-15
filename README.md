@@ -12,7 +12,7 @@ There is no automatic setup. Clone this repo (to `~/.dotfiles`) and add the foll
 ~/.config/nvim -> ~/dotfiles/vim
 ~/.hyper.js -> ~/dotfiles/hyper.js
 ~/.tmux.conf -> ~/dotfiles/tmux.conf
-~/.fluxbox/keys -> ~/dotfiles/fluxbox/keys
+~/.config/i3 -> ~/dotfiles/i3
 ~/.config/Code/User/settings.json -> ~/dotfiles/vscode/settings.json
 ~/.config/Code/User/keybindings.json -> ~/dotfiles/vscode/keybindings.json
 ```
