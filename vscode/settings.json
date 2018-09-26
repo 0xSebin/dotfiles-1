@@ -14,7 +14,7 @@
     "terminal.integrated.rendererType": "dom",
 
     // Looks
-	"workbench.colorTheme": "Plastic",
+    "workbench.colorTheme": "Min Dark",
     "debug.toolBarLocation": "docked",
     "liveServer.settings.donotShowInfoMsg": true,
     "vsicons.dontShowNewVersionMessage": true,
