@@ -28,7 +28,8 @@ bindsym $mod+Shift+p exec screengrab -r
 bindsym $mod+space exec "rofi -combi-modi window,drun -show combi -modi combi -theme gruvbox-dark-hard"
 
 # lock
-bindsym $mod+Shift+l exec i3lock -c 000000
+bindsym $mod+Shift+l exec "i3lock -c 000000 ; systemctl hibernate"
+bindsym $mod+Control+Shift+l exec "i3lock -c 000000 ; systemctl suspend"
 
 # change focus
 bindsym $mod+Left focus left
