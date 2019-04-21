@@ -13,6 +13,7 @@ There is no automatic setup. Clone this repo (to `~/.dotfiles`) and add the foll
 ~/.hyper.js -> ~/dotfiles/hyper.js
 ~/.tmux.conf -> ~/dotfiles/tmux.conf
 ~/.config/i3 -> ~/dotfiles/i3
+~/.config/polybar -> ~/dotfiles/polybar
 ~/.config/Code/User/settings.json -> ~/dotfiles/vscode/settings.json
 ~/.config/Code/User/keybindings.json -> ~/dotfiles/vscode/keybindings.json
 ```

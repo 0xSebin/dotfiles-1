@@ -1,4 +1,0 @@
-#!/bin/bash
-
-xrandr --output LVDS-1 --off
-feh --bg-scale ~/Downloads/bg.jpg

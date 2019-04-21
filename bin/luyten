@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+java -jar ~/dotfiles/bin/luyten-0.5.4.jar $@
+

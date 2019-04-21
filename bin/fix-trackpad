@@ -1,0 +1,5 @@
+#!/usr/bin/env sh
+for id in `xinput --list|grep 'Touchpad'|perl -ne 'while (m/id=(\d+)/g){print "$1\n";}'`; do
+  xinput set-prop $id "libinput Natural Scrolling Enabled" 1
+done 
+

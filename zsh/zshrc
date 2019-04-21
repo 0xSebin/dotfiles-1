@@ -7,30 +7,42 @@ autoload -U promptinit; promptinit;
 source <(antibody init)
 antibody bundle < ~/dotfiles/zsh/zsh_plugins.txt
 
-export PATH="$HOME/dotfiles/bin:$HOME/.cargo/bin:$HOME/.yarn/bin:/snap/bin:./node_modules/.bin:$HOME/apps/android-studio/bin:$PATH"
+export PATH="$HOME/bin:$HOME/.composer/vendor/bin:$HOME/go/bin:$HOME/dotfiles/bin:$HOME/.cargo/bin:$HOME/.yarn/bin:/snap/bin:./vendor/bin:./node_modules/.bin:$HOME/apps/android-studio/bin:$PATH"
 
 source ~/dotfiles/zsh/zsh_functions.zsh
 
-[[ cmd-exists("hub") ]] && eval "$(hub alias -s)"
-[[ cmd-exists("thefuck") ]] && eval "$(thefuck --alias)"
-[[ cmd_exists("nvim") ]] && alias vim="nvim"
-[[ cmd_exists("docker-compose") ]] && alias dc="docker-compose"
-[[ cmd-exists("vtop") ]] && alias top="vtop"
-[[ cmd-exists("exa") ]] && alias ls="exa"
-[[ cmd-exists("exa") ]] && alias tree="exa --tree"
-[[ cmd-exists("bat") ]] && alias cat="bat"
-[[ cmd-exists("clipboard") ]] && alias cb="clipboard"
+eval "$(hub alias -s)"
+eval "$(thefuck --alias)"
 
-if [[ cmd-exists("git") ]]; then
-    alias g="git"
-    alias m="g checkout master"
-fi
+alias vim="nvim"
+export VISUAL=nvim
+export EDITOR="$VISUAL"
+
+alias d="docker"
+alias dc="docker-compose"
+
+alias top="vtop --theme wizard"
+
+alias ls="exa"
+alias tree="exa --tree"
+
+alias cat="bat"
+
+alias cb="clipboard"
+
+alias a="php artisan"
+alias pu="vendor/bin/phpunit"
+
+alias sl="ls"
+alias grpe="grep"
+alias gerp="grep"
+alias sduo="sudo"
+
+alias g="git"
+alias m="g checkout master"
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" --no-use  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-
-export VISUAL=nvim
-export EDITOR="$VISUAL"

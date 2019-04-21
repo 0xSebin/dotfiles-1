@@ -12,7 +12,7 @@ module.exports = {
     fontSize: 13,
 
     // font family with optional fallbacks
-    fontFamily: '"Iosevka Nerd Font"',
+    fontFamily: '"scientifica", "Iosevka Nerd Font"',
 
     // `BEAM` for |, `UNDERLINE` for _, `BLOCK` for █
     cursorShape: 'BEAM',
@@ -76,9 +76,9 @@ module.exports = {
   plugins: [
     "gitrocket",
     "hyperterm-paste",
-    "hyper-tabs-enhanced",
     "hyper-statusline",
-    "hyperocean"
+    "hyperterm-monokai",
+    "hyper-tabs-enhanced"
   ],
 
   // in development, you can create a directory under `~/.hyper_plugins/local/`
