@@ -35,7 +35,7 @@ grey = #757575
 blue-gray = #546e7a
 
 [bar/top]
-monitor = ${env:MONITOR:DP-2}
+monitor = ${env:MONITOR:}
 dpi      = 192
 width    = 100%
 height   = 26
@@ -49,7 +49,7 @@ foreground = ${color.fg}
 border-size = 3
 border-color = ${color.bg}
 
-font-0 = scientifica:size=14;2
+font-0 = scientifica:size=16;2
 
 module-margin = 2
 
@@ -72,6 +72,8 @@ full-at = 99
 battery = BAT0
 adapter = AC0
 
+label-charging = %{F#A9ABB0}charging%{F-} %percentage%%
+label-discharging = %{F#A9ABB0}discharging%{F-} %percentage%% %time%
 label-full = %{F#A9ABB0}(battery full)%{F-}
 
 [module/network]

@@ -1,6 +1,6 @@
-# Dots
+# [Dots](https://knowledge.tassu.me/my-computer)
 
-This is a copy of my dotfiles on my Kali machine.
+This is a copy of my dotfiles on my computer.
 
 ## Setup
 

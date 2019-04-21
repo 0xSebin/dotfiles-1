@@ -24,8 +24,11 @@ bindsym $mod+Shift+h exec jetbrains-toolbox
 # screenshot
 bindsym $mod+Shift+p exec screengrab -r
 
+# rofi
+bindsym $mod+space exec "rofi -combi-modi window,drun -show combi -modi combi -theme gruvbox-dark-hard"
+
 # lock
-bindsym $mod+Shift+l exec xscreensaver-command -lock
+bindsym $mod+Shift+l exec i3lock -c 000000
 
 # change focus
 bindsym $mod+Left focus left

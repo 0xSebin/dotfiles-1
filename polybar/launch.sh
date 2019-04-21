@@ -6,9 +6,12 @@ killall -q polybar
 # Wait until the processes have been shut down
 while pgrep -u $UID -x polybar >/dev/null; do sleep 1; done
 
-# Specify monitor
+if type "xrandr"; then
+  for m in $(xrandr --query | grep " connected" | cut -d" " -f1); do
+    MONITOR=$m polybar top &
+  done
+else
+  polybar --reload top &
+fi
 
-# Launch top
-MONITOR=$(polybar -m|tail -1|sed -e 's/:.*$//g') polybar top &
-
-echo "Bars launched..."
+echo "Bars launched."
