@@ -1,48 +1,15 @@
-#!/usr/bin/env zsh
-# https://github.com/supertassu/dotfiles
-# .zshrc
-
 autoload -U promptinit; promptinit;
 
-source <(antibody init)
-antibody bundle < ~/dotfiles/zsh/zsh_plugins.txt
-
-export PATH="$HOME/bin:$HOME/.composer/vendor/bin:$HOME/go/bin:$HOME/dotfiles/bin:$HOME/.cargo/bin:$HOME/.yarn/bin:/snap/bin:./vendor/bin:./node_modules/.bin:$HOME/apps/android-studio/bin:$PATH"
-
-source ~/dotfiles/zsh/zsh_functions.zsh
-
-eval "$(hub alias -s)"
-eval "$(thefuck --alias)"
-
-alias vim="nvim"
-export VISUAL=nvim
-export EDITOR="$VISUAL"
-
-alias d="docker"
-alias dc="docker-compose"
-
-alias top="vtop --theme wizard"
-
-alias ls="exa"
-alias tree="exa --tree"
-
-alias cat="bat"
-
-alias cb="clipboard"
-
+alias code="code-insiders"
 alias a="php artisan"
-alias pu="vendor/bin/phpunit"
-
-alias sl="ls"
-alias grpe="grep"
-alias gerp="grep"
-alias sduo="sudo"
-
 alias g="git"
-alias m="g checkout master"
 
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" --no-use  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+export PATH="$PATH:/home/taavi/bin:/home/taavi/.local/bin"
 
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+source <(antibody init)
+antibody bundle < ~taavi/dotfiles/zsh/zsh_plugins.txt
+
+source <(gh completion -s zsh)
+
+bindkey "^[[1;5C" forward-word
+bindkey "^[[1;5D" backward-word
