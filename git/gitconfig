@@ -1,14 +1,18 @@
+[core]
+	excludesFile = /home/taavi/.gitignore
 [user]
-	name = Tassu
-	email = git@tassu.me
-	signingkey = 94901D4EE4061F7E
-[commit]
-	gpgsign = true
+	name = Taavi Väänänen
+	email = hi@tassu.me
 [alias]
-    hist = log --pretty=format:'%h %ad | %s%d [%an]' --graph --date=short
-    l = log --pretty=format:"%C(yellow)%h\\ %ad%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --date=relative
-    ll = log --pretty=format:"%C(yellow)%h\\ %ad\\%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --numstat --date=relative
-    b = "!git for-each-ref --sort='-authordate' --format='%(authordate)%09%(objectname:short)%09%(refname)' refs/heads | sed -e 's-refs/heads/--'"
-    s = status
-    c = commit
+	d = diff
+	c = commit
+	a = add
+	s = status
+	m = merge
+	mm = merge
+	r = rebase
+	hist = log --pretty=format:'%h %ad | %s%d [%an]' --graph --date=short
+	l = log --pretty=format:"%C(yellow)%h\\ %ad%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --date=relative
+	ll = log --pretty=format:"%C(yellow)%h\\ %ad\\%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --numstat --date=relative
+	b = "!git for-each-ref --sort='-authordate' --format='%(authordate)%09%(objectname:short)%09%(refname)' refs/heads | sed -e 's-refs/heads/--'"
 
