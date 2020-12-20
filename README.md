@@ -1,28 +1,8 @@
-# [Dots](https://knowledge.tassu.me/my-computer)
+# [Dots](https://taavi.wtf/uses)
 
 This is a copy of my dotfiles on my computer.
 
 ## Setup
 
-There is no automatic setup. Clone this repo (to `~/.dotfiles`) and add the following aliases to setup:
-
-```shell
-# link location -> link target
-# ln -s target location
-~/.config/nvim -> ~/dotfiles/vim
-~/.hyper.js -> ~/dotfiles/hyper.js
-~/.tmux.conf -> ~/dotfiles/tmux.conf
-~/.config/i3 -> ~/dotfiles/i3
-~/.config/polybar -> ~/dotfiles/polybar
-~/.config/Code/User/settings.json -> ~/dotfiles/vscode/settings.json
-~/.config/Code/User/keybindings.json -> ~/dotfiles/vscode/keybindings.json
-```
-
-Also, the following files have to be modified.
-
-```shell
-# ~/.zshrc
-source ~/dotfiles/zsh/zshrc
-```
-
-Neovim automatically installs plugins when you first start it, however you have to restart before using all of them. 
+I haven't been bothered to create a setup script yet. I will probably at some point, no idea when.
+You should be able to figure out from file names what everything does.

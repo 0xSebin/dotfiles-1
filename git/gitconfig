@@ -1,5 +1,3 @@
-[core]
-	excludesFile = /home/taavi/.gitignore
 [user]
 	name = Taavi Väänänen
 	email = hi@tassu.me

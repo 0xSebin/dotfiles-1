@@ -1,0 +1,25 @@
+#!/bin/bash
+# create and setup a database for a laravel project
+
+set -e
+
+USERNAME="laravel"
+PASSWORD="secret"
+
+ENV_FILE=".env"
+DB_NAME=${PWD##*/}
+
+if [ ! -f "$ENV_FILE" ]; then
+    echo "$ENV_FILE does not exist."
+    exit 1
+fi
+
+mysql <<EOF
+create database $DB_NAME;
+grant all on $DB_NAME.* to '$USERNAME'@'localhost';
+EOF
+
+sed -i "/DB_DATABASE\=laravel/c\DB_DATABASE=$DB_NAME" $ENV_FILE
+sed -i "/DB_USERNAME\=root/c\DB_USERNAME=$USERNAME" $ENV_FILE
+sed -i "/DB_PASSWORD\=/c\DB_PASSWORD=$PASSWORD" $ENV_FILE
+

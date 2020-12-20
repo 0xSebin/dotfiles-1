@@ -1,4 +1,6 @@
-#!/usr/bin/env sh
+#!/bin/bash
+# A script to fix trackpad direction when using i3
+
 for id in `xinput --list|grep 'Touchpad'|perl -ne 'while (m/id=(\d+)/g){print "$1\n";}'`; do
   xinput set-prop $id "libinput Natural Scrolling Enabled" 1
 done
