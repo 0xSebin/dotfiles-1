@@ -1,10 +1,19 @@
 autoload -U promptinit; promptinit;
 
 alias code="code-insiders"
+alias nano="nvim"
+
 alias a="php artisan"
 alias g="git"
 
-export PATH="$PATH:/home/taavi/bin:/home/taavi/.local/bin"
+alias d="docker"
+alias dc="docker-compose"
+
+alias sl="ls"
+
+export PATH="$PATH:$HOME/bin:$HOME/.local/bin:$HOME/src/dotfiles/bin:$HOME/.rvm/bin"
+
+export NVM_COMPLETION=true
 
 source <(antibody init)
 antibody bundle < ~taavi/src/dotfiles/zsh/zsh_plugins.txt
@@ -13,3 +22,5 @@ source <(gh completion -s zsh)
 
 bindkey "^[[1;5C" forward-word
 bindkey "^[[1;5D" backward-word
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

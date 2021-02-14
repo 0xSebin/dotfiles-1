@@ -21,9 +21,16 @@ bindsym $mod+Shift+q kill
 # start rofi (a program launcher)
 bindsym $mod+d exec "rofi -combi-modi window,drun -show combi -modi combi -theme gruvbox-dark-hard"
 
+# bind splits
+bindsym $mod+h split h
+bindsym $mod+v split v
+
 # lock
 bindsym $mod+Shift+l exec "i3lock -c 000000 ; systemctl hibernate"
 bindsym $mod+Control+Shift+l exec "i3lock -c 000000 ; systemctl suspend"
+
+# screnshot
+bindsym $mod+Shift+p exec screengrab -r
 
 # navigate
 bindsym $mod+Left focus left
