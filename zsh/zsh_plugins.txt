@@ -1,6 +1,3 @@
-#/home/tassu/stuff/another-theme # dev
-supertassu/another-theme
-
 zsh-users/zsh-syntax-highlighting # Fish shell like syntax highlighting for zsh
 zsh-users/zsh-completions # Additional completion definitions for Zsh
 zsh-users/zsh-autosuggestions branch:develop # Fish-like autosuggestions for zsh
