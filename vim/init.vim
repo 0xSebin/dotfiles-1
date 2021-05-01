@@ -49,13 +49,13 @@ autocmd VimEnter *
   \| endif
 
 " initialize status line
-let g:airline_theme='deus'
+let g:airline_theme='ayu_dark'
 let g:airline_powerline_fonts = 1 
 
 " intitialize color scheme
 " Theme
 set background=dark " Set night mode
-let ayucolor="mirage" " Mirage version of theme
+let ayucolor="dark" " Mirage version of theme
 colorscheme ayu
 
 hi Normal     ctermbg=NONE guibg=NONE

@@ -1,4 +1,5 @@
 autoload -U promptinit; promptinit;
+autoload -Uz compinit; compinit;
 
 alias code="code-insiders"
 alias nano="nvim"
@@ -9,11 +10,17 @@ alias g="git"
 alias d="docker"
 alias dc="docker-compose"
 
+alias cat="batcat"
+alias ls="exa"
 alias sl="ls"
 
 alias com="docker run --rm -it --volume $PWD:/app --user $(id -u):$(id -g) composer"
+alias k="kubectl"
+source <(k completion zsh)
 
-export PATH="$PATH:$HOME/bin:$HOME/.local/bin:$HOME/src/dotfiles/bin:$HOME/.rvm/bin"
+alias screen-brightness="xrandr --output eDP-1 --brightness"
+
+export PATH="$PATH:$HOME/bin:$HOME/.local/bin:$HOME/src/dotfiles/bin:$HOME/.rvm/bin:$HOME/.config/composer/vendor/bin"
 
 export NVM_COMPLETION=true
 
@@ -27,12 +34,9 @@ bindkey "^[[1;5D" backward-word
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
-autoload -Uz compinit
-compinit
-
-alias k="kubectl"
-source <(k completion zsh)
-
 # Only load liquidprompt in interactive shells, not from a script or from scp
 echo $- | grep -q i 2>/dev/null && . /usr/share/liquidprompt/liquidprompt
+
+export DEBFULLNAME="Taavi Väänänen"
+export DEBEMAIL="hi@taavi.wtf"
 

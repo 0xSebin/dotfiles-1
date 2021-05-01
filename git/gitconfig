@@ -22,11 +22,21 @@
 	rc = rebase --continue
 	ri = rebase --interactive
 	s = status
+	can = c --amend --no-edit
+	sh = show --show-signature
+	rr = review -R
 
 [commit]
 	gpgsign = true
 
 [gpg]
 	program = gpg
+
 [pull]
 	ff = only
+
+[init]
+	defaultBranch = main
+
+[rebase]
+	stat = true
