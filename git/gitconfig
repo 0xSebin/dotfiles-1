@@ -9,6 +9,7 @@
 	a = add
 	b = "!git for-each-ref --sort='-authordate' --format='%(authordate)%09%(objectname:short)%09%(refname)' refs/heads | sed -e 's-refs/heads/--'"
 	c = commit
+	can = c --amend --no-edit
 	cm = co master
 	co = checkout
 	d = diff
@@ -21,10 +22,9 @@
 	r = rebase
 	rc = rebase --continue
 	ri = rebase --interactive
-	s = status
-	can = c --amend --no-edit
-	sh = show --show-signature
 	rr = review -R
+	s = status
+	sh = show --show-signature
 
 [commit]
 	gpgsign = true
