@@ -11,10 +11,6 @@ cn() {
     git checkout -b "$1"
 }
 
-fzf-down() {
-    fzf --height 50% "$@" --border
-}
-
 rm-merged() {
     git checkout master
     git branch --merged master | grep -v '^[ *]*master$' | xargs git branch -d

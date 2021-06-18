@@ -32,11 +32,10 @@ source <(gh completion -s zsh)
 bindkey "^[[1;5C" forward-word
 bindkey "^[[1;5D" backward-word
 
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-
 # Only load liquidprompt in interactive shells, not from a script or from scp
 echo $- | grep -q i 2>/dev/null && . /usr/share/liquidprompt/liquidprompt
 
+# For building Debian packages
 export DEBFULLNAME="Taavi Väänänen"
 export DEBEMAIL="hi@taavi.wtf"
 

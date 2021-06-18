@@ -6,15 +6,15 @@
 [keybindings]
 [profiles]
   [[default]]
-    background_color = "#0a0e14"
+    background_color = "#ffffff"
     background_darkness = 0.8
     background_type = transparent
     cursor_color = "#aaaaaa"
     font = Iosevka Taavi 11
-    foreground_color = "#b3b1ad"
+    foreground_color = "#000000"
     show_titlebar = False
     scrollback_lines = 5000
-    palette = "#2e3436:#ff3333:#c2d94c:#e6b450:#39bae6:#75507b:#06989a:#d3d7cf:#555753:#f07178:#ffee99:#ffb454:#95e6cb:#ad7fa8:#34e2e2:#eeeeec"
+    palette = "#000000:#aa0000:#00aa00:#aa5500:#0000aa:#aa00aa:#00aaaa:#aaaaaa:#555555:#ff5555:#55ff55:#ffff55:#5555ff:#ff55ff:#55ffff:#ffffff"
     use_system_font = False
 [layouts]
   [[default]]

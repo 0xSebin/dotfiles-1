@@ -1,76 +1,28 @@
 {
-    // Font configuration
-    "editor.fontFamily": "Fira Code",
-    "editor.fontLigatures": true,
-    "editor.fontSize": 12,
-
-    // Window configuration
-    "window.menuBarVisibility": "visible",
+    "editor.fontFamily": "'Iosevka Taavi'",
+    "telemetry.enableTelemetry": false,
+    "workbench.colorTheme": "GitHub Light",
+    "workbench.editorAssociations": {
+        "*.ipynb": "jupyter-notebook"
+    },
+    "files.associations": {
+        "*.css": "postcss"
+    },    
+    "python.insidersChannel": "weekly",
+    "python.formatting.provider": "black",
     "window.titleBarStyle": "custom",
-    "workbench.settings.editor": "json",
-    "explorer.confirmDelete": false,
-    "explorer.autoReveal": false,
-    "explorer.confirmDragAndDrop": false,
-    "terminal.integrated.rendererType": "dom",
-
-    // Looks
-    "workbench.colorTheme": "Min Dark",
-    "debug.toolBarLocation": "docked",
-    "liveServer.settings.donotShowInfoMsg": true,
-    "vsicons.dontShowNewVersionMessage": true,
-    "javascript.updateImportsOnFileMove.enabled": "never",
-
-    // Files
-    "files.autoSave": "onFocusChange",
+    "workbench.iconTheme": "vs-nomo-dark",
+    "editor.rulers": [
+        80
+    ],
+    "workbench.startupEditor": "welcomePage",
     "files.insertFinalNewline": true,
-    "files.exclude": {
-        "**/.git": true,
-        "**/.svn": true,
-        "**/.hg": true,
-        "**/CVS": true,
-        "**/.DS_Store": true,
-        "**/node_modules": true,
-        "**/dist": true,
-        "**/db": true,
-        "**/yarn.lock": true,
-        "**/package-lock.json": true
-    },
-
-    // NPM
-    "npm.packageManager": "yarn",
-    
-    // XO
-    "xo.enable": false, // set per project
-
-    // ESLint
-    "eslint.packageManager": "yarn",
-    
-    // Git
-    "git.autofetch": true,
-    "git.enableCommitSigning": true,
-    "git.confirmSync": false,
-    
-    // Gitlens
-    "gitlens.historyExplorer.enabled": true,
-    "gitlens.advanced.messages": {
-        "suppressShowKeyBindingsNotice": true
-    },
-
-    // Clock
-    "clock.datetimeFormat": "HH:mm:ss",
-
-    // Spotify
-    "spotify.showMuteUnmuteVolumeButton": false,
-    "spotify.showNextButton": false,
-    "spotify.showPlayPauseButton": false,
-    "spotify.showPreviousButton": false,
-    "spotify.trackInfoFormat": "artistName -- trackName",
-    
-    // Dart path
-    "dart.sdkPath": "/usr/lib/dart",
-    "rust.rustup": {
-        "toolchain": "stable-x86_64-unknown-linux-gnu"
-    },
-    "rust.mode": "rls",
-    "window.zoomLevel": 0,
+    "editor.fontSize": 15,
+    "typescript.updateImportsOnFileMove.enabled": "never",
+    "go.autocompleteUnimportedPackages": true,
+    "go.formatTool": "gofumports",
+    "notebook.cellToolbarLocation": {
+        "default": "right",
+        "jupyter-notebook": "left"
+    }
 }
