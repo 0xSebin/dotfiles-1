@@ -1,0 +1,33 @@
+AddKeysToAgent yes
+ForwardAgent no
+
+Host *.toolforge.org *.wikimedia.cloud *.wmcloud.org gerrit.wikimedia.org git-ssh.wikimedia.org
+	IdentityFile ~/.ssh/id_ed25519_wmcs
+	IdentityAgent /run/user/1000/ssh-wmcloud.socket
+	UserKnownHostsFile ~/.ssh/known_hosts.d/wmf-cloud
+
+Match host *.tools.eqiad1.wikimedia.cloud user root
+    IdentityFile ~/.ssh/id_ed25519_wmcs_toolforge_root
+    IdentityAgent /run/user/1000/ssh-wmcloud-toolforge-root.socket
+
+Match host *.toolsbeta.eqiad1.wikimedia.cloud user root
+    IdentityFile ~/.ssh/id_ed25519_wmcs_toolsbeta_root
+    IdentityAgent /run/user/1000/ssh-wmcloud-toolsbeta-root.socket
+
+Match host *.paws.eqiad1.wikimedia.cloud user root
+    IdentityFile ~/.ssh/id_ed25519_wmcs_paws_root
+    IdentityAgent /run/user/1000/ssh-wmcloud-paws-root.socket
+
+Match host *.deployment-prep.eqiad1.wikimedia.cloud user root
+    IdentityFile ~/.ssh/id_ed25519_wmcs_deploymentprep_root
+    IdentityAgent /run/user/1000/ssh-wmcloud-deploymentprep-root.socket
+
+Host *.wikimedia.cloud
+    ProxyJump bastion.wmcloud.org
+
+Host github.com
+    IdentityFile ~/.ssh/id_ed25519_github
+    IdentityAgent /run/user/1000/ssh-github.socket
+    UserKnownHostsFile ~/.ssh/known_hosts.d/github
+
+# (some private things removed)
